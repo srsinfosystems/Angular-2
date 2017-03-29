@@ -1,0 +1,63 @@
+page-signup {
+
+}
+
+
+.dash-tab{
+background-color:#FF6B21;
+}
+
+.toolbar-background {
+  background-color: #FF6B21;
+}
+
+.toolbar-title-md {
+    color: white;
+    /*text-align:center;*/
+}
+ 
+ion-input{
+	border:solid 0.5px #ccc;
+	border-radius:7px;
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+.label-md[stacked] {
+    font-size: 16px;
+    color:black;
+}
+
+ion-select{
+	border:solid 0.5px #ccc;
+	border-radius:6px;
+	height:35px;
+	font-size: 14px;
+	padding-left: 10px;
+}
+.item-label-stacked .select-md, .item-label-floating .select-md {
+    padding-left: 10px;
+}
+
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: white;
+}
+
+.create-button{
+	background-color:#FF6B21;
+	color:white;
+	display: block; 
+	margin: 0 auto;
+	margin-top:20px;
+	border-radius:5px;
+	text-transform: capitalize;
+}
+
+ion-footer{
+	text-align:center;
+	background-color:#ccc;
+}
+
+.custom_footer{
+	background-color:#ccc;
+}

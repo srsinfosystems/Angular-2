@@ -1,0 +1,64 @@
+<ion-header >
+  <ion-navbar >
+    <ion-title color="primary" style="color:white;font-family:cursive;">{{'SIGNUP.CREATE_PROFILE' | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<form [formGroup]="loginForm" (ngSubmit)="create_profile()">
+	<ion-row style="padding-bottom: 20px;" class="border">
+		<ion-item >
+			<ion-label stacked>{{'SIGNUP.CURRENT_SCHOOL_LEVEL' | translate}}</ion-label>
+			<ion-select placeholder="Select School Level" formControlName="academic_year_id">
+				<ion-option value="{{todo.ClassLevel.id}}" *ngFor="let todo of classes; let i = index" >{{todo.ClassLevel.title}}</ion-option>
+		   </ion-select>
+		</ion-item>
+	</ion-row>
+		
+	<ion-row>
+		<ion-item>
+			<ion-label stacked >{{'SIGNUP.NAME' | translate}}</ion-label>
+			<ion-input type="text" placeholder="Name" formControlName="name" ></ion-input>
+		</ion-item>
+	</ion-row>
+	
+	
+	<ion-row>	
+		<ion-item>
+		  <ion-label stacked>{{'SIGNUP.GENDER' | translate}}</ion-label>
+		  <ion-select placeholder="Select Gender" formControlName="gender" >
+			<ion-option value="1" >Male</ion-option>
+			<ion-option value="2" >Female</ion-option>
+		  </ion-select>
+		</ion-item>
+	</ion-row>
+	
+	<ion-row>	
+		<ion-item>
+			<ion-label stacked>{{'SIGNUP.RACE' | translate}}</ion-label>
+			<ion-select placeholder="Select Race" formControlName="race">
+				<ion-option value="1" >Malay</ion-option>
+				<ion-option value="2">Indian</ion-option>
+		   </ion-select>
+		</ion-item>
+	</ion-row>
+		
+	<ion-row>
+		<ion-item>
+			<ion-label stacked>{{'SIGNUP.SCHOOL_NAME' | translate}}</ion-label>
+			<ion-input type="text" placeholder="School Name" formControlName="school" ></ion-input>
+		</ion-item>
+	</ion-row>
+		
+		
+	<ion-row>
+		<!--<button ion-button class="create-button" [navPush]="getstartpage">{{'SIGNUP.CREATE_PROFILE' | translate}}</button>-->
+		<button ion-button  type="submit" class="create-button" [disabled]="!loginForm.valid">{{'SIGNUP.CREATE_PROFILE' | translate}}</button>
+	</ion-row>
+	</form>
+</ion-content>
+<ion-footer class="custom_footer">
+   <ion-toolbar>
+	 <ion-title>Admob space</ion-title>
+   </ion-toolbar>
+ </ion-footer>

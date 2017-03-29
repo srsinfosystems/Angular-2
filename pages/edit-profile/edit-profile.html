@@ -1,0 +1,79 @@
+
+<ion-header>
+  <ion-navbar hideBackButton="true">
+	<ion-title style="font-family:cursive;">
+    	<ion-icon name="arrow-back" class="custom_class1" (click)="goBack()"></ion-icon>
+    	&nbsp;&nbsp;&nbsp;Edit Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!--<ion-header>
+
+  <ion-navbar>
+    <ion-title color="primary" style="color:white;font-family:cursive;">Edit Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>---->
+
+
+<ion-content padding>
+	
+	<p style="margin-left:15px">Email: {{email}}</p>
+	<form [formGroup]="profileForm" (ngSubmit)="updateProfile()">
+	<ion-row style="padding-bottom: 20px;" class="border">
+		<ion-item >
+			<ion-label stacked>{{'SIGNUP.CURRENT_SCHOOL_LEVEL' | translate}}</ion-label>
+			<ion-select placeholder="Select School Level" formControlName="academic_year_id" [(ngModel)]="class_id">
+				<ion-option value="{{todo.ClassLevel.id}}" *ngFor="let todo of classes; let i = index" >{{todo.ClassLevel.title}}</ion-option>
+		   </ion-select>
+		</ion-item>
+	</ion-row>
+		
+	<ion-row>
+		<ion-item>
+			<ion-label stacked >{{'SIGNUP.NAME' | translate}}</ion-label>
+			<ion-input type="text" placeholder="Name" [value]="name" formControlName="name" [(ngModel)]="name" ></ion-input>
+		</ion-item>
+	</ion-row>
+	
+	
+	<ion-row>	
+		<ion-item>
+		  <ion-label stacked>{{'SIGNUP.GENDER' | translate}}</ion-label>
+		  <ion-select placeholder="Select Gender" formControlName="gender" [(ngModel)]="gender">
+			<ion-option value="1" >Male</ion-option>
+			<ion-option value="2" >Female</ion-option>
+		  </ion-select>
+		</ion-item>
+	</ion-row>
+	
+	<ion-row>	
+		<ion-item>
+			<ion-label stacked>{{'SIGNUP.RACE' | translate}}</ion-label>
+			<ion-select placeholder="Select Race" formControlName="race" [(ngModel)]="race">
+				<ion-option value="1" ngif="race=='1'" checked="true">Malay</ion-option>
+				<ion-option value="2" ngif="race=='2'" checked="true">Indian</ion-option>
+		   </ion-select>
+		</ion-item>
+	</ion-row>
+		
+	<ion-row>
+		<ion-item>
+			<ion-label stacked>{{'SIGNUP.SCHOOL_NAME' | translate}}</ion-label>
+			<ion-input type="text" placeholder="School Name" [value]="school_name" formControlName="school" [(ngModel)]="school_name"></ion-input>
+		</ion-item>
+	</ion-row>
+		
+		
+	<ion-row>
+		<!--<button ion-button class="create-button" [navPush]="getstartpage">{{'SIGNUP.CREATE_PROFILE' | translate}}</button>-->
+		<button ion-button  type="submit" class="create-button" [disabled]="!profileForm.valid">Update Profile</button>
+	</ion-row>
+	</form>
+</ion-content>
+<ion-footer class="custom_footer">
+   <ion-toolbar>
+	 <ion-title>Admob space</ion-title>
+   </ion-toolbar>
+ </ion-footer>

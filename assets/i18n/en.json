@@ -1,0 +1,48 @@
+{
+  "HOME": {
+    "TITLE": "Learning App",
+    "SIGN_IN_GOOGLE": "Sign in with Google+",
+    "SELECT": "Change language",
+    "START" : "Start",
+    "GET_STARTED":"Get Started",
+    "GET_STARTED_TEXT1" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "GET_STARTED_TEXT2" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  },
+   "SIGNUP": {
+    "NAME": "Name",
+    "CURRENT_SCHOOL_LEVEL": "Current School Level",
+    "GENDER": "Gender",
+    "RACE": "Race",
+    "SCHOOL_NAME": "School Name",
+    "CREATE_PROFILE": "Create Profile",
+    "ALL_FIELDS_ARE_MANDATORY": "All fields are mandatory"
+  },
+  "DASHBOARD": {
+    "DASHBOARD": "Dashboard",
+    "FORM3": "Form3",
+    "PRPFILE": "Profile",
+    "RANKING": "Ranking",
+    "SUBJECT": "Subject",
+    "TEST": "Test",
+    "CALENDAR": "Calendar",
+    "REAWARD": "Reward",
+    "STATISTIC": "Statistic"
+  },
+   "SUBJECTS": {
+    "SUBJECTS": "Subjects",
+    "WHAT_SUBJECT_TO_STUDY": "What subject you want to study?"
+  },
+  
+  "ABOUT": {
+    "TITLE": "About"
+  },
+  "CONTACT": {
+    "TITLE": "Contact",
+    "TWITTER_MESSAGE": "Follow us on Twitter"
+  },
+  "TABS": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "CONTACT": "Contact"
+  }
+}
